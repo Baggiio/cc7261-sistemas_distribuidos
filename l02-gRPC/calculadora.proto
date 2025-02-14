@@ -1,0 +1,15 @@
+syntax = "proto3";
+
+service Greeter {
+    rpc Calculadora(MsgCliente) returns (MsgServidor) {}
+}
+
+message MsgCliente {
+    int32 operacao = 1;
+    double numero1 = 2;
+    double numero2 = 3;
+}
+
+message MsgServidor {
+    double resultado = 1;
+}
